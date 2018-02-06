@@ -502,8 +502,8 @@ JFXProgressBar jfxBarInf = new JFXProgressBar();
 jfxBarInf.setPrefWidth(500);
 jfxBarInf.setProgress(-1.0f);
 Timeline timeline = new Timeline(
-    new KeyFrame(Duration.ZERO, new KeyValue(bar.progressProperty(), 0), new KeyValue(jfxBar.progressProperty(), 0)),
-    new KeyFrame(Duration.seconds(2), new KeyValue(bar.progressProperty(), 1), new KeyValue(jfxBar.progressProperty(), 1)));
+    new KeyFrame(Duration.ZERO, new KeyValue(jfxBar.progressProperty(), 0), new KeyValue(jfxBar.progressProperty(), 0)),
+    new KeyFrame(Duration.seconds(2), new KeyValue(jfxBar.progressProperty(), 1), new KeyValue(jfxBar.progressProperty(), 1)));
 timeline.setCycleCount(Timeline.INDEFINITE);
 timeline.play();
 </pre>
